@@ -1,11 +1,14 @@
 import re
 import sqlite3
+import logging
 
 from pokedex.utils import is_pikachu
 
 
 class ConnectionWrapper:
     """A simple connection wrapper class"""
+
+    logging.warning('Watch out!')
 
     def __init__(self, db_path):
         self.__conn = sqlite3.connect(db_path)
